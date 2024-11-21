@@ -10,13 +10,13 @@ export default function App() {
   const [countClicks, setCountClicks] = useState(0);
   const { isLoading, error, lat, lng } = useGeolocate();
 
-  function getPosition() {
+  function handleClick() {
     setCountClicks((count) => count++);
   }
 
   return (
     <div>
-      <button onClick={getPosition} disabled={isLoading}>
+      <button onClick={handleClick} disabled={isLoading}>
         Get my position
       </button>
 
